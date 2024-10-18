@@ -81,7 +81,7 @@ const Footer = () => {
             Kannoth building, near Darussalam School, Vallathol Junction,
             Thrikkakara, P.O, Kochi, Kerala 682021
             <br />
-            Phone: +91 9544044544
+            Phone: +91 7736558999
             <br />
             Email: laziodigilux@gmail.com
           </p>

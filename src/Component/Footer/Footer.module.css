@@ -103,7 +103,7 @@
   width: 60px;
   height: 60px;
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .w_app {

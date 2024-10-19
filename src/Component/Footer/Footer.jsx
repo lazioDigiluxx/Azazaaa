@@ -1,16 +1,9 @@
 import React from "react";
 import styles from "./Footer.module.css";
 import logo from "./../../assets/Images/logo.png";
-
-import {
-  FaWhatsapp,
-  FaLinkedin,
-  FaFacebook,
-  FaInstagram,
-} from "react-icons/fa";
-
-import Footer_image_wht_up from "./../../assets/Images/chat-bubble_17747616.png";
-import CallButtonicon from "./../../assets/Images/calling_9968470.png";
+import { FaWhatsapp, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
+import FooterImageWhtUp from "./../../assets/Images/chat-bubble_17747616.png";
+import CallButtonIcon from "./../../assets/Images/calling_9968470.png";
 
 const Footer = () => {
   return (
@@ -24,38 +17,22 @@ const Footer = () => {
           <div className={styles.socialMedia}>
             <ul>
               <li>
-                <a
-                  href="https://wa.me"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://wa.me" target="_blank" rel="noopener noreferrer">
                   <FaWhatsapp />
                 </a>
               </li>
               <li>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                   <FaLinkedin />
                 </a>
               </li>
               <li>
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                   <FaFacebook />
                 </a>
               </li>
               <li>
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                   <FaInstagram />
                 </a>
               </li>
@@ -94,21 +71,18 @@ const Footer = () => {
         <p>&copy; Copyright @ 2023 and All rights reserved by Lazio Digilux</p>
       </div>
 
+      {/* Floating WhatsApp and Call Button */}
       <a
         href="https://wa.me/+919113523278"
-        style={{ textDecoration: "none", cursor: "pointer", color: "black" }}
+        className={styles.w_app}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <div className={styles.w_app}>
-          <img src={Footer_image_wht_up} alt="WhatsApp Icon" className={styles.whatsapp_fix_img} />
-        </div>
+        <img src={FooterImageWhtUp} alt="WhatsApp Icon" className={styles.whatsappFixImg} />
       </a>
 
-      <a href="tel:+919544044544" style={{ textDecoration: "none", cursor: "pointer", color: "black" }}>
-        <div className={styles.callButton}>
-          <img src={CallButtonicon} alt="Call Icon" className={styles.call_fix_img} />
-        </div>
+      <a href="tel:+919544044544" className={styles.callButton}>
+        <img src={CallButtonIcon} alt="Call Icon" className={styles.callFixImg} />
       </a>
     </footer>
   );

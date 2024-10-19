@@ -6,13 +6,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 400px;
-  /* justify-content: space-around; */
 }
 
 .footerContent {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 90%;
   max-width: 1200px;
   flex-wrap: wrap; /* Ensure it wraps on smaller screens */
@@ -36,10 +34,15 @@
 }
 
 .socialMedia ul {
-  /* display: flex; */
-  /* justify-content: left; */
+  display: flex;
+  justify-content: center; /* Center social media icons */
   list-style: none;
-  gap: 1px;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.socialMedia ul li {
+  margin: 0 10px; /* Space between icons */
 }
 
 .socialMedia ul li a {
@@ -86,11 +89,10 @@
 }
 
 /* Floating WhatsApp and Call Button Styling */
-.whatsapp_fix_img, .call_fix_img {
+.whatsappFixImg, .callFixImg {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  animation: pulse 2s infinite;
 }
 
 .w_app, .callButton {
@@ -121,19 +123,20 @@
 /* For Tablets */
 @media (max-width: 768px) {
   .footerContent {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Stack columns on smaller screens */
+    align-items: center; /* Center align items */
   }
 
   .firstFooter, .secondFooter, .thirdFooter {
     padding: 10px;
+    text-align: center; /* Center text */
   }
 
   .socialMedia ul {
-    gap: 15px;
+    gap: 15px; /* Increase gap between icons */
   }
 
-  .whatsapp_fix_img, .call_fix_img {
+  .whatsappFixImg, .callFixImg {
     width: 30px;
     height: 30px;
   }
@@ -146,30 +149,36 @@
 
 /* For Mobile Devices */
 @media (max-width: 480px) {
-  .footerContent {
-    flex-direction: column;
-    align-items: center;
-  }
-
+  
   .footerMain {
+
     padding: 30px 10px;
+
   }
 
   .firstFooter, .secondFooter, .thirdFooter {
+
     padding: 10px;
+
   }
 
   .socialMedia ul {
-    gap: 1px;
+
+    gap: 5px; /* Decrease gap for smaller screens */
+
   }
 
-  .whatsapp_fix_img, .call_fix_img {
+  .whatsappFixImg, .callFixImg {
+
     width: 25px;
     height: 25px;
+
   }
 
   .w_app, .callButton {
+
     width: 45px;
     height: 45px;
+
   }
 }

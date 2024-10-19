@@ -86,7 +86,7 @@ const Service = () => {
 
       <div className={styles.mainServicesub}>
         {/* Conditional rendering based on screen size */}
-        {window.innerWidth < 768 ? (
+        
           <Slider {...settings}>
             {services.map((service, index) => (
               <div key={index} className={styles.carouselItem}>
@@ -96,17 +96,7 @@ const Service = () => {
               </div>
             ))}
           </Slider>
-        ) : (
-          services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              href={`/services/${service.title.toLowerCase().replace(/ /g, "-")}`}
-              description={service.description}
-            />
-          ))
-        )}
+       
       </div>
     </div>
   );

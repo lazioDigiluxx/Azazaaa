@@ -1,51 +1,77 @@
 import React from 'react';
-import styles from './Contact.module.css';
+import { Users, Phone, MapPin } from 'lucide-react';
+import './Contact.module.css';  // Import the updated CSS
 
-const Contact = () => {
+const ContactForm = () => {
   return (
-    <div className={styles.main}>
-      <div className={styles.contact}>
-        <h1>Let’s get in touch</h1>
-        <p>We are always ready to solve your problems.</p>
-        <h3>Contact Us</h3>
-        <p>
-          <a href="tel:+919567889900">+(91) 9567889900</a>{' '}<br></br><br></br>
-          <a href="tel:+919922445566">+(91) 9922445566</a>
+    <div className="contact-container">
+      <div className="contact-box">
+        <h1 className="contact-title">Contact Us</h1>
+        <p className="contact-subtitle">
+          {/* Any questions or remarks? Just write us a message! */}
         </p>
-        <p>
-          <a href="mailto:lazioteam@gmail.com">lazioteam@gmail.com</a>
-        </p>
-        <address>
-          Lazio Team Chochi Building House(H),<br />
-          Thrikkakara P.O, Kochi, Kerala 676709
-        </address>
-      </div>
 
-      <div className={styles.right}>
-        <h3>Great! We're excited to hear from you and let's start something special.<br/> Call us for any inquiry.</h3>
-        <form className={styles.contact_form}>
-          <div className={styles.form_group}>
-            <label htmlFor="name">Name *</label>
-            <input type="text" id="name" name="name" required />
-          </div><br></br>
-          <div className={styles.form_group}>
-            <label htmlFor="email">Email *</label>
-            <input type="email" id="email" name="email" required />
-          </div><br></br>
-          <div className={styles.form_group}>
-            <label htmlFor="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" />
-          </div><br></br>
-        
-          <div className={styles.form_group} >
-            <label htmlFor="message" >Message *</label>
-            <textarea id="message" name="message" required></textarea>
+        <form className="contact-form">
+          {/* First Group of Inputs (Email and Name) */}
+          <div className="contact-input-group">
+          <input
+              type="text"
+              placeholder="Enter your Name"
+              className="contact-input"
+            />
+            <input
+              type="email"
+              placeholder="Enter a valid email address"
+              className="contact-input"
+            />
           </div>
-          <button type="submit" className={styles.send_button}>Submit</button>
+
+          {/* Second Group (Address and Phone) */}
+          <div className="contact-input-group">
+          <input
+              type="phone"
+              placeholder="Enter a valid phone number"
+              className="contact-input"
+            />
+            <input
+              type="text-area"
+              placeholder="Enter your Message"
+              className="contact-input"
+            />
+          </div>
+
+          <button type="submit" className="contact-submit-btn">
+            SUBMIT
+          </button>
         </form>
+
+        {/* Icon Container */}
+        <div className="icon-container">
+          <div className="contact-info">
+            <div className="info-item">
+              <Users className="info-icon" size={28} />
+              <h3>ABOUT CLUB</h3>
+              <p>Running Guide</p>
+              <p>Workouts</p>
+            </div>
+            <div className="info-item">
+              <Phone className="info-icon" size={28} />
+              <h3>PHONE</h3>
+              <p>+(91) 9544044544</p> 
+              <p>+(91) 8089090143</p>
+            </div>
+            <div className="info-item">
+              <MapPin className="info-icon" size={28} />
+              <h3>OUR LOCATION</h3>
+              <p>Kannoth building, near Darussalam School,
+                    Vallathol Junction, Thrikkakara P.O,
+                Kochi, Kerala 682021</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Contact;
+export default ContactForm;

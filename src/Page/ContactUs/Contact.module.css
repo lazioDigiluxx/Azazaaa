@@ -1,159 +1,109 @@
-.main {
+.contact-container {
   display: flex;
-  justify-content: space-between;
-  padding: 50px;
-  font-family: Arial, sans-serif;
-  background-color: black;
-  height: 98vh;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full-page height */
+  background-color: #ffffff;
+  padding: 500px;
+}
+
+/* Contact form box */
+.contact-box {
+  background-color: rgb(0, 0, 0);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
   width: 100%;
-  box-sizing: border-box; 
 }
 
-.contact {
-  width: 40%;
-  color: white; 
-}
-
-.contact h1, 
-.contact p, 
-.contact h3, 
-.contact a, 
-.contact address {
-  animation: slideIn 0.5s ease forwards;
-  opacity: 0; 
-  color: white; 
-}
-
-.contact h1 {
-  font-size: 48px;
-  font-weight: bold;
-  animation-delay: 0.2s;
-}
-
-.contact p {
-  margin: 20px 0;
-  animation-delay: 0.4s;
-}
-
-.contact h3 {
-  margin-top: 30px;
-  font-weight: normal;
-  animation-delay: 0.6s;
-}
-
-.contact a {
-  color: #007BFF;
-  text-decoration: none;
-  animation-delay: 0.8s;
-}
-
-.contact address {
-  margin-top: 20px;
-  font-style: normal;
-  line-height: 1.6;
-  animation-delay: 1s;
-}
-
-.right {
-  width: 55%;
-  background-color: rgb(68, 67, 67);
+/* Title and subtitle styling */
+.contact-title {
+  font-size: 2.5rem;
   text-align: center;
-  width: 50%;
-  height: 500px;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
-.right h3 {
-  /* margin-bottom: 40px; */
-  color: white; 
-  padding-top: 10px;
+.contact-subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 30px;
 }
 
-.contact_form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1;
-  /* justify-content: center; */
- padding-left: 200px;
- 
-}
-.contact_form button{
-  margin-left: 100px;
-}
-.form_group {
+/* Form input group */
+.contact-input-group {
   display: flex;
-  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
-.form_group label {
-  margin-bottom: 5px; 
+/* Styling for inputs */
+.contact-input {
+  padding: 12px;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  font-size: 1rem;
+  background-color: #f1f1f1;
+  flex: 1;
 }
 
-.form_group textarea,
-
-.form_group input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 100%; 
-  box-sizing: border-box; 
+.contact-input:focus {
+  outline: none;
+  border-color: #00c2cb;
 }
 
-.send_button {
-  grid-column: span 2;
-  padding: 8px 12px; 
-  background-color: #007BFF;
+/* Submit button */
+.contact-submit-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: gold; /* Updated to gold */
   color: white;
   border: none;
-  border-radius: 8px; 
-  font-size: 12px;
+  border-radius: 20px;
+  font-size: 1rem;
   cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 0.5px; 
-  margin-top: 10px; 
-  width: 20%;
 }
 
-.send_button:hover {
-  background-color: #0056b3;
+.contact-submit-btn:hover {
+  background-color: #d4af37; /* A darker shade of gold for hover effect */
 }
 
-
-@keyframes slideIn {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+/* Icon container styling */
+.icon-container {
+  margin-top: 40px;
+  background-color: #f9fafb68; /* Optional background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-@media (max-width: 1024px) {
-  .main {
-    flex-direction: column;
-    padding: 20px;
-  }
-  .contact, .right {
-    width: 100%;
-  }
+/* Contact information (aligned horizontally) */
+.contact-info {
+  display: flex;
+  justify-content: space-between; /* Evenly distribute icons */
+  gap: 20px;
+  margin-top: 30px;
 }
 
-@media (max-width: 768px) {
-  .contact h1 {
-    font-size: 36px;
-  }
-  .contact_form {
-    grid-template-columns: 1fr;
-  }
+/* Individual info item styling */
+.info-item {
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px; /* Optional: Limit the width of each item */
 }
 
-@media (max-width: 480px) {
-  .contact h1 {
-    font-size: 30px;
-  }
-  .main {
-    padding: 10px;
-  }
+/* Icon styling */
+.info-icon {
+  background-color: gold; /* Updated to gold */
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

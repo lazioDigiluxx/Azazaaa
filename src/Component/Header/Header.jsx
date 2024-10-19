@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Header.module.css";
 import backgroundVideo from "./../../assets/Images/backVideo.mp4";
-import MovingComponent from "react-moving-text";
 import { TypeAnimation } from "react-type-animation";
-import logo from "./../../assets/Images/logo.png"
+import logo from "./../../assets/Images/logo.png";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -12,10 +12,13 @@ const Header = () => {
         <source src={backgroundVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      {/* <p>azaza</p> */}
-      <div className={styles.left}>
-        <h1>
-          One-Stop Solutions for
+      <div className={styles.header_content}>
+        <h1 className={styles.header_title}>
+          Promote Your Brand <br /> with Azaza Marketing Solutions
+        </h1>
+        <div className={styles.left}>
+        <h2>
+          Expert In
           <br />
           <span style={{ display: "inline-block" }}>
             <TypeAnimation
@@ -35,14 +38,13 @@ const Header = () => {
           </span>{" "}
           <br />
           Needs!!
-        </h1>
+        </h2>
       </div>
-
-      <div className={styles.right}>
-        <img src={logo} alt="Logo" />
+        <br/>
+        <Link to="/contact" className={styles.cta_button}>
+          Get Started
+        </Link>
       </div>
-
-
 
       {/* Marquee Text */}
       <div className={styles.marquee}>
@@ -50,8 +52,7 @@ const Header = () => {
           Digital Marketing &nbsp; | &nbsp; Web Solutions &nbsp; | &nbsp; SEO
           &nbsp; | &nbsp; Digital Marketing &nbsp; | &nbsp; Web Solutions &nbsp;
           | &nbsp; SEO &nbsp; | &nbsp; Digital Marketing &nbsp; | &nbsp; Web
-          Solutions &nbsp; | &nbsp; SEO &nbsp; | &nbsp; Digital Marketing &nbsp;
-          | &nbsp; Web Solutions &nbsp; | &nbsp; SEO &nbsp; | &nbsp;
+          Solutions &nbsp; | &nbsp; SEO &nbsp; | &nbsp;
         </span>
       </div>
     </div>

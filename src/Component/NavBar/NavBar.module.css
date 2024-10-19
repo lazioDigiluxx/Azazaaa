@@ -1,18 +1,19 @@
 .nav {
     background-color: black;
     width: 100%;
-    height: 10vh; /* Set to viewport height for better responsiveness */
+    height: 10vh;
     display: flex;
-    justify-content: center; /* Center all the content horizontally */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
     position: fixed;
-    z-index: 999;
-    position: fixed;
+    z-index: 99;
 }
 
+/* Show the nav links on desktop */
 .navList {
     display: flex;
-    justify-content: space-around; /* Evenly distribute items horizontally */
- /* Vertically center items */
+    justify-content: space-around;
     width: 100%;
     padding: 10px;
     margin: 0;
@@ -20,25 +21,53 @@
 }
 
 .navList li {
-    z-index: 999;
     text-align: center;
-    padding: 0 20px; 
-    justify-content: center;
+    padding: 0 20px;
 }
 
 .navLink {
-    color: red; /* Set all nav links to red */
-    text-decoration: none; /* Remove underline */
-    cursor: pointer; /* Add pointer on hover */
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
     border-radius: 4rem;
 }
 
 .navLink:hover {
-    color: white; /* Change color on hover */
+    color: white;
 }
 
-.navList img {
-    width: 150px; /* Adjust logo size */
-    height: 100px;
-    
+/* Hide the menu icon by default */
+.menuIcon {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem; 
+    color: red;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+
+    .menuIcon {
+        /* display: block;  */
+        background-color: white;
+        color: red;
+    }
+
+    .navList {
+        display: none; /* Hide the nav links by default on mobile */
+        /* flex-direction: column; */
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        background-color: black;
+    }
+
+    /* When the menu is toggled open, show the links */
+    .navList.showMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full screen for mobile menu */
+    }
 }

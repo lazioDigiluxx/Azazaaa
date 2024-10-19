@@ -1,117 +1,139 @@
-.mainService{
-    width: 100%;
-    height: 96vh;
-    background-color: black;
-    text-align: left;
-    /* display: flex; */
+/* Services.module.css */
+.mainService {
+  width: 100%;
+  height: auto; /* Changed to auto for better responsiveness */
+  background-color: black;
+  text-align: left;
+  padding: 20px; /* Add padding for smaller screens */
 }
-.mainService p{
-    color: white;
-    padding-left: 20%;
+
+.mainService p {
+  color: white;
+  padding-left: 5%; /* Reduced for smaller screens */
 }
-.mainServicesub{
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
+
+.mainServicesub {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  justify-content: center;
 }
+
 .mainService h1 {
-    padding-left: 10%; /* Maintain left padding */
-    color: white; /* Ensure the text color is white */
-    padding-top: 70px; /* Maintain top padding */
-    font-size: 2.5rem; /* Increase font size for better visibility */
-    animation: moveText 0.5s ease-in-out forwards; /* Add animation */
-    opacity: 0; /* Start with invisible text */
+  padding-left: 5%; /* Adjusted for smaller screens */
+  color: white;
+  padding-top: 20px; /* Adjusted for smaller screens */
+  font-size: 2rem; /* Reduced font size for smaller screens */
+  animation: moveText 0.5s ease-in-out forwards;
+  opacity: 0;
 }
 
 .movingText.show {
-    opacity: 1; /* Fade in when shown */
+  opacity: 1;
 }
 
 p {
-    max-width: 600px; /* Adjust the width for better readability */
-    line-height: 1.8; /* Increase line spacing */
-    margin: 20px 0; /* Add margin for spacing */
-    font-size: 1.2rem; /* Adjust font size for better readability */
-    color: #555; /* Customize text color for a more professional look */
-    text-align: justify; /* Optional: Align text for a neat look */
-}
-.servicelist{
-    width: 100%;
-    /* height: 98vh; */
-    /* background-color: white; */
+  max-width: 600px; /* Keep this for readability */
+  line-height: 1.8;
+  margin: 20px 0;
+  font-size: 1rem; /* Adjusted for better readability on small screens */
+  color: #555;
+  text-align: justify;
 }
 
-.left{
-    width: 30%;
+.servicelist {
+  display: flex;
+  flex-direction: column; /* Stack items on smaller screens */
+  align-items: center;
 }
 
-li{
-    list-style: none;
-    color: white;
-text-align: center;}
-/* Services.module.css */
-/* .mainService {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  } */
-  
-  .servicelist {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 10%;
+.left {
+  width: 100%; /* Take full width on smaller screens */
+}
+
+li {
+  list-style: none;
+  color: white;
+  text-align: center;
+}
+
+.left ul {
+  list-style: none;
+  padding: 0;
+}
+
+.left li {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  transition: background-color 0.3s;
+}
+
+.left li:hover {
+  background-color: #f0f0f0;
+  color: #d49f0d;
+}
+
+.active {
+  background-color: #dcdcdc;
+}
+
+.right {
+  width: 100%; /* Take full width on smaller screens */
+}
+
+.serviceDetails {
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+@keyframes moveText {
+  0% {
+      transform: translateX(100%);
   }
-  
-  .left ul {
-    list-style: none;
-    padding: 0;
+  100% {
+      transform: translateX(0);
   }
-  
-  .left li {
-    cursor: pointer;
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin-bottom: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .left li:hover {
-    background-color: #f0f0f0;
-    color: #d49f0d;
-   
-  }
-  
-  .active {
-    background-color: #dcdcdc;
-  }
-  
-  .right {
-    /* margin-left: 20px; */
-    width: 70%;
-    height: 500%;
-  }
-  
-  .serviceDetails {
-    padding: 20px;
-    border: 1px solid #ddd;
-  }
-  @keyframes moveText {
-    0% {
-        transform: translateX(100%); /* Start from the right */
-    }
-    100% {
-        transform: translateX(0); /* End at the original position */
-    }
 }
 
 .movingText {
-    display: inline-block; /* Make it an inline-block for smoother animation */
-    animation: moveText 0.5s ease-in-out forwards; /* Animation properties */
-    opacity: 0; /* Start with invisible text */
-    animation-fill-mode: forwards; /* Keep the final state after animation */
-    color: white;
+  display: inline-block;
+  animation: moveText 0.5s ease-in-out forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  color: white;
 }
 
 .movingText.show {
-    opacity: 1; /* Fade in when shown */
+  opacity: 1;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+  .mainService h1 {
+      font-size: 2.5rem; /* Increase for larger screens */
+  }
+
+  .mainService p {
+      padding-left: 20%; /* Maintain padding for larger screens */
+  }
+
+  .mainServicesub {
+      flex-direction: row; /* Row layout on larger screens */
+  }
+
+  .left, .right {
+      width: 50%; /* Adjust widths for larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainService {
+      padding: 40px; /* Add padding for larger screens */
+  }
+
+  .mainService h1 {
+      padding-top: 70px; /* Original padding */
+  }
 }

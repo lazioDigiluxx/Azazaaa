@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import Footer from './../../Component/Footer/Footer'; 
 import logo from "./../../assets/Images/logo.png";
@@ -8,29 +8,40 @@ import { CgMenuGridO } from "react-icons/cg";
 
 const Layout = () => {
     const [open, setOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
     const handleMenu = () => {
         setOpen(true);
-        console.log("opened!!!");
     };
 
     const handleClose = () => {
         setOpen(false);
-        console.log("closed!!!");
     };
+
+    const handleResize = () => {
+        setIsMobile(window.innerWidth < 768);
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     return (
         <div className={styles.layout}>
-            {/* Stickbar */}
-            <div className={styles.stickBar}>
-                <Link to={'/'} className={styles.logoContainer}>
-                    <img src={logo} alt="Logo" />
-                </Link>
-                {/* Icon container */}
-                <div className={styles.menuIcon} onClick={handleMenu}>
-                    <CgMenuGridO />
+            {/* Stickbar, only show on desktop */}
+            {!isMobile && (
+                <div className={styles.stickBar}>
+                    <Link to={'/'} className={styles.logoContainer}>
+                        <img src={logo} alt="Logo" />
+                    </Link>
+                    <div className={styles.menuIcon} onClick={handleMenu}>
+                        <CgMenuGridO />
+                    </div>
                 </div>
-            </div>
+            )}
 
             {/* Page content */}
             <div className={styles.content}>

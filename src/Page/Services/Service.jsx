@@ -6,7 +6,7 @@ import webIcon from "./../../assets/Images/coding.png";
 import seoIcon from "./../../assets/Images/seo.png";
 import socialmediaIcon from "./../../assets/Images/social-media_13561895.png";
 import marketingIcon from "./../../assets/Images/marketing.png"
-import BrandingIcon from "./../../assets/Images/Branding.png"
+import BrandingIcon from "./../../assets/Images/branding.png"
 import logoIcon from "./../../assets/Images/logoIcon.png"
 const Service = () => {
   const [animate, setAnimate] = useState(false);

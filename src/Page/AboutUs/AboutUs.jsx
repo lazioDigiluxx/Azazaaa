@@ -4,13 +4,15 @@ import NavBar from '../../Component/NavBar/NavBar';
 import Card from '../../Component/AboutMotion/Card';
 import logo from "./../../assets/Images/logo.png";
 import Footer from '../../Component/Footer/Footer';
+
+import Testimonals from '../../Component/Slider/Slider';
 const AboutUs = () => {
   const cardTexts = [
-    "Welcome to Lazio Digilux! We are a dynamic digital marketing agency, established in 2021 and located in Thrikkakara, Kochi. " +
-    "We offer a wide range of services, including digital marketing, web development, graphic design, video creation, photography, and a lot more. " +
-    "Our team of experienced and talented professionals is dedicated to helping businesses of all sizes grow their online presence and reach their target audience. " +
-    "We understand the importance of creating a strong online presence for businesses in today's digital age, and we work hard to create custom marketing strategies that are tailored to each client's specific needs. " +
-    "If you are looking for a digital marketing agency that can help you take your business to the next level, then Lazio Digilux is the perfect choice for you."
+
+    "Our team has years of experience in web development, digital marketing, branding, and more.",
+    "We tailor our services to meet the unique needs of your business.",
+    "Our focus is on delivering measurable results that drive growth."
+
   ];
 
   return (
@@ -20,13 +22,14 @@ const AboutUs = () => {
       <div className={styles.heroSection}>
         <h1 className={styles.heading}>
       
-          <span className={styles.line1}>We Grow Brands,</span>
-          <span className={styles.line2}>Create Experience,</span>
-          <span className={styles.line3}>Solve Business Problems</span>
+          <span className={styles.line1}>Your Partner in </span>
+          <span className={styles.line2}></span>
+          <span className={styles.line3}>Digital Success</span>
         
         </h1>
         <p className={styles.subText}>
-          Empowering businesses with cutting-edge digital solutions and strategies.
+        Azaza is a leading marketing agency based in Kochi, specializing in providing innovative and effective solutions to businesses of all sizes. 
+        With a team of experienced professionals, we are dedicated to helping you achieve your marketing goals and grow your brand.
         </p>
       </div>
 
@@ -34,11 +37,11 @@ const AboutUs = () => {
         {cardTexts.map((text, index) => (
           <Card key={index} text={text} index={index} />
         ))}
-        <button>
-          <span role="img" aria-label="explore">Explore</span>
-        </button>
+       
       </div>
-      {/* <Footer/> */}
+
+      {/* <Testimonals/> */}
+     
     </div>
   );
 };

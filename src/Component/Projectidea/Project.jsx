@@ -9,7 +9,7 @@ const Project = () => {
       <Lottie
         animationData={Idea}
         loop={true}
-        style={{ width: '300px', height: '300px' }} // Adjust size as needed
+        style={{ width: '300px', height: '300px', overflow: 'hidden' }} // Adjust size as needed
       />
       <h1>Have a Project Idea?</h1>
       <div className={styles.buttonContainer}>

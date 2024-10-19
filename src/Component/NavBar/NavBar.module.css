@@ -8,6 +8,7 @@
     padding: 0 20px;
     position: fixed;
     z-index: 99;
+    left: 0;
 }
 
 /* Show the nav links on desktop */
@@ -38,7 +39,7 @@
 
 /* Hide the menu icon by default */
 .menuIcon {
-    display: none;
+    display: none; /* Initially hide */
     cursor: pointer;
     font-size: 2rem; 
     color: red;
@@ -46,28 +47,31 @@
 
 /* Responsive Styles for Mobile */
 @media (max-width: 768px) {
-
     .menuIcon {
-        /* display: block;  */
-        background-color: white;
-        color: red;
+        display: block; /* Show the menu icon on mobile */
+        background-color: transparent; /* Optional: Set background color */
     }
 
     .navList {
         display: none; /* Hide the nav links by default on mobile */
-        /* flex-direction: column; */
         position: absolute;
-        top: 10vh;
+        top: 10vh; /* Adjust to align below the nav */
         left: 0;
         width: 100%;
         background-color: black;
+        flex-direction: column; /* Stack items vertically */
+        z-index: 100; /* Ensure it appears above other content */
     }
 
     /* When the menu is toggled open, show the links */
     .navList.showMenu {
-        display: flex;
+        display: flex; /* Show the nav links */
         justify-content: center;
         align-items: center;
         height: 100vh; /* Full screen for mobile menu */
+    }
+
+    .navList li {
+        padding: 10px; /* Adjust padding for mobile */
     }
 }

@@ -3,7 +3,7 @@ import styles from './ServiceCard.module.css';
 import { InlineWidget } from 'react-calendly';  
 import Modal from 'react-modal';               
 
-const SericeCard = ({ icon, title, description }) => {
+const ServiceCard = ({ icon, title, description }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => setIsModalOpen(true);
@@ -37,7 +37,11 @@ const SericeCard = ({ icon, title, description }) => {
       <img className={styles.card_icon} src={icon} alt={title} />
       <h2 className={styles.card_title}>{title}</h2>
       <p className={styles.card_description}>{description}</p>
-      <button onClick={handleOpenModal} className={styles.card_link}>
+      <button 
+        onClick={handleOpenModal} 
+        onTouchEnd={handleOpenModal} 
+        className={styles.card_link}
+      >
         Let's Talk
       </button>
 
@@ -61,4 +65,4 @@ const SericeCard = ({ icon, title, description }) => {
   );
 };
 
-export default SericeCard;
+export default ServiceCard;

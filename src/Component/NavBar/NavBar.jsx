@@ -28,7 +28,7 @@ const NavBar = () => {
 
   return (
     <nav className={styles.nav}>
-      <div className={styles.menuIcon} onClick={handleMenuToggle}>
+      <div style={{position:"fixed"}} className={styles.menuIcon} onClick={handleMenuToggle}>
         {open ? <RiCloseLargeFill /> : <GrMenu />}
       </div>
 

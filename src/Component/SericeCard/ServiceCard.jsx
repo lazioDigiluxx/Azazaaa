@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './ServiceCard.module.css';
-import { InlineWidget } from 'react-calendly';  // Import Calendly widget
-import Modal from 'react-modal';               // Import Modal for popup
+import { InlineWidget } from 'react-calendly';  
+import Modal from 'react-modal';               
 
 const SericeCard = ({ icon, title, description }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,15 +20,15 @@ const SericeCard = ({ icon, title, description }) => {
       width: '55%',
       height:'75%',
       padding: '20px',
-      backgroundColor: 'rgba(0, 0, 0, 0.85)',  // Black with slight transparency
-      color: 'white',                          // White text for contrast
-      borderRadius: '12px',                    // Softer, rounded edges
-      border: 'none',                          // Remove default border for cleaner look
-      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)', // Add subtle shadow for depth
+      backgroundColor: 'rgba(0, 0, 0, 0.85)',  
+      color: 'white',                          
+      borderRadius: '12px',                
+      border: 'none',                         
+      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)', 
     },
     overlay: {
-      backgroundColor: 'rgba(0, 0, 0, 0.75)',   // Dark semi-transparent overlay
-      zIndex: '999',                            // Ensure it appears on top
+      backgroundColor: 'rgba(0, 0, 0, 0.75)',   
+      zIndex: '999',                            
     },
   };
   

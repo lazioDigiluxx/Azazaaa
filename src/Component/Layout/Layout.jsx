@@ -8,7 +8,7 @@ import { CgMenuGridO } from "react-icons/cg";
 
 const Layout = () => {
     const [open, setOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768 );
 
     const handleMenu = () => {
         setOpen(true);

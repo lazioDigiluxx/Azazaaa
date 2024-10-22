@@ -26,7 +26,7 @@
     height: 100%;
     object-fit: cover;
     z-index: 0;
-    filter: brightness(0.4); /* Darken the video for better contrast */
+    filter: brightness(0.4); 
 }
 
 .header_content {
@@ -51,7 +51,7 @@
 .subheading {
     font-size: 2rem;
     margin-top: 10px;
-    color: #FFD700; /* Goldenrod color for subheading */
+    color: #FFD700; 
 }
 
 .typing_animation {
@@ -109,6 +109,8 @@
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
+
+    
     .header_main {
         flex-direction: column;
         justify-content: flex-start;
@@ -178,6 +180,7 @@
     .background_video {
         display: none; /* Hide the video on small screens for performance */
     }
+    
 }
 
 @media (max-width: 576px) {
@@ -215,4 +218,5 @@
     .marquee span {
         font-size: 1rem;
     }
+    
 }

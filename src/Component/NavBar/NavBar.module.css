@@ -11,9 +11,15 @@
     left: 0;
 }
 
+.menuIcon {
+    cursor: pointer;
+    font-size: 2rem; 
+    color: red;
+}
+
 /* Show the nav links on desktop */
 .navList {
-    display: flex;
+    display: flex; /* Show menu in desktop */
     justify-content: space-around;
     width: 100%;
     padding: 10px;
@@ -37,41 +43,29 @@
     color: white;
 }
 
-/* Hide the menu icon by default */
-.menuIcon {
-    display: none; /* Initially hide */
-    cursor: pointer;
-    font-size: 2rem; 
-    color: red;
-}
-
-/* Responsive Styles for Mobile */
+/* Mobile Styles */
 @media (max-width: 768px) {
-    .menuIcon {
-        display: block; /* Show the menu icon on mobile */
-        background-color: transparent; /* Optional: Set background color */
-    }
-
     .navList {
-        display: none; /* Hide the nav links by default on mobile */
+        display: flex; /* Initially hide on mobile */
+        flex-direction: column; /* Stack items vertically */
         position: absolute;
-        top: 10vh; /* Adjust to align below the nav */
+        top: 10vh; /* Align below the nav */
         left: 0;
         width: 100%;
-        background-color: black;
-        flex-direction: column; /* Stack items vertically */
-        z-index: 100; /* Ensure it appears above other content */
+        background-color: rgb(185, 18, 18); /* Background color for mobile menu */
+        max-height: 0; /* Start hidden */
+        overflow: hidden; /* Hide overflow */
+        opacity: 0; /* Start hidden */
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition */
     }
 
-    /* When the menu is toggled open, show the links */
     .navList.showMenu {
-        display: flex; /* Show the nav links */
-        justify-content: center;
-        align-items: center;
-        height: 100vh; /* Full screen for mobile menu */
+        max-height: 300px; /* Allow room for menu items */
+        opacity: 1; /* Make visible */
     }
 
     .navList li {
-        padding: 10px; /* Adjust padding for mobile */
+        padding: 10px; /* Add padding for mobile items */
+        text-align: center; 
     }
 }

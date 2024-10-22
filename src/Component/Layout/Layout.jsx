@@ -5,7 +5,7 @@ import logo from "./../../assets/Images/logo.png";
 import styles from "./Layout.module.css";
 import { Link } from 'react-router-dom';
 import { CgMenuGridO } from "react-icons/cg";
-
+import NavBar from '../NavBar/NavBar';
 const Layout = () => {
     const [open, setOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768 );
@@ -32,6 +32,7 @@ const Layout = () => {
     return (
         <div className={styles.layout}>
             {/* Stickbar, only show on desktop */}
+            <NavBar/>
             {!isMobile && (
                 <div className={styles.stickBar}>
                     <Link to={'/'} className={styles.logoContainer}>
@@ -52,7 +53,6 @@ const Layout = () => {
             <Footer />
 
             {/* Full-page Menu Overlay */}
-            
             {open && (
                 <div className={styles.menuOverlay}>
                     <div className={styles.menuContent}>

@@ -23,7 +23,7 @@ const AboutUs = () => {
         <h1 className={styles.heading}>
       
           <span className={styles.line1}>Your Partner in </span>
-          <span className={styles.line2}></span>
+          {/* <span className={styles.line2}></span> */}
           <span className={styles.line3}>Digital Success</span>
         
         </h1>

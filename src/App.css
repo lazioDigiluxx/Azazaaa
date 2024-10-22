@@ -1,6 +1,11 @@
-*{
-    @media (max-width: 768px) {
-            overflow-x: hidden;
+/* General styles for all elements */
+* {
+    box-sizing: border-box; /* Optional: add box-sizing for better layout control */
+}
 
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Prevent horizontal overflow on mobile */
     }
 }

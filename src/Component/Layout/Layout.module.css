@@ -10,7 +10,7 @@
     left: 0;
     top: 0;
     height: 100vh;
-    z-index: 999;
+    z-index: 99;
     position: fixed;
     display: flex;
     flex-direction: column; /* Aligns logo and icon vertically */

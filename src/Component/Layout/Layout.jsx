@@ -36,7 +36,7 @@ const Layout = () => {
             {!isMobile && (
                 <div className={styles.stickBar}>
                     <Link to={'/'} className={styles.logoContainer}>
-                        <img src={logo} alt="Logo" />
+                        {/* <img src={logo} alt="Logo" /> */}
                     </Link>
                     <div className={styles.menuIcon} onClick={handleMenu}>
                         <CgMenuGridO />

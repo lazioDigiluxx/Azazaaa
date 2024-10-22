@@ -7,11 +7,17 @@
     align-items: center;
     padding: 0 20px;
     position: fixed;    
-    z-index: 99;
+    z-index: 999;
     left: 0;
+   
     
 }
-
+.nav img{
+    width: 150px;
+    height: 100px;
+    max-width: 90%;
+    left: 0;
+}
 
 
 /* Show the nav links on desktop */
@@ -64,7 +70,8 @@
         cursor: pointer;
         font-size: 2rem; 
         color: red;
-        z-index: 999999;
+        z-index: 999;
+        padding: 20px;
     }
     .navList.showMenu {
         /* max-height: 300px;  */
@@ -74,5 +81,12 @@
     .navList li {
         /* padding: 10px;  */
         text-align: center; 
+    }
+    .nav img{
+        width: 150px;
+        height: 100px;
+        max-width: 90%;
+        padding-top: 10px;
+        left: 0;
     }
 }

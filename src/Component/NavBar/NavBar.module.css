@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    position: fixed;
+    /* position: fixed; */
     z-index: 99;
     left: 0;
 }
@@ -52,8 +52,8 @@
         top: 10vh; /* Align below the nav */
         left: 0;
         width: 100%;
-        background-color: rgb(185, 18, 18); /* Background color for mobile menu */
-        max-height: 0; /* Start hidden */
+        background-color: rgb(10, 3, 3); /* Background color for mobile menu */
+        z-index: 99;
         overflow: hidden; /* Hide overflow */
         opacity: 0; /* Start hidden */
         transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition */

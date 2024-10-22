@@ -52,6 +52,7 @@ const Layout = () => {
             <Footer />
 
             {/* Full-page Menu Overlay */}
+            
             {open && (
                 <div className={styles.menuOverlay}>
                     <div className={styles.menuContent}>

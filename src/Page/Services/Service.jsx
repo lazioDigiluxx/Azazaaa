@@ -68,36 +68,42 @@ const Service = () => {
           href="/services/web-development"
           description="Creating stunning, user-friendly websites that convert."
         />
+        
         <ServiceCard
           icon={seoIcon}
           title="Search Engine Marketing"
           href="/services/seo-optimization"
           description="Optimizing your website for search engines to drive organic traffic."
         />
+
         <ServiceCard
           icon={marketingIcon}
           title="Digital Marketing"
           href="/services/graphic-design"
           description="Boosting your online visibility through SEO, PPC, and social media."
         />
+
         <ServiceCard
           icon={socialmediaIcon}
           title="Social Media Marketing"
           href="/services/social-media-marketing"
           description="Engaging your target audience on popular social platforms."
         />
+
         <ServiceCard
           icon={BrandingIcon}
           title="Branding"
           href="/services/social-media-marketing"
           description="Developing strong brand identities that resonate with your audience."
         />
+
         <ServiceCard
           icon={logoIcon}
           title="Logo Creation"
           href="/services/social-media-marketing"
           description="Designing unique logos that capture the essence of your brand."
         />
+
       </div>
     </div>
   );

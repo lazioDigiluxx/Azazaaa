@@ -7,7 +7,7 @@
     align-items: center;
     padding: 0 20px;
     position: fixed;    
-    z-index: 999;
+    z-index: 1000;
     left: 0;
    
     
@@ -29,6 +29,7 @@
     padding: 10px;
     margin: 0;
     list-style-type: none;
+    cursor: pointer;
 }
 
 .navList li {
@@ -39,7 +40,7 @@
 .navLink {
     color: red;
     text-decoration: none;
-    cursor: pointer;
+    /* cursor: pointer; */
     border-radius: 4rem;
 }
 
@@ -50,43 +51,33 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
     .navList {
-  
         flex-direction: column; /* Stack items vertically */
         position: fixed;
-        top: 0; /* Align below the nav */
+        top: 10vh; /* Align below the nav */
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: calc(100vh - 10vh); /* Fill remaining height */
         background-color: black; /* Background color for mobile menu */
-        z-index: 9;
         overflow: hidden; 
-        opacity: 0; 
-        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+        transition: opacity 0.3s ease; /* Smooth transition */
+        opacity: 0; /* Start hidden */
+        visibility: hidden; /* Start hidden */
     }
     
-    
+    .navList.showMenu {
+        opacity: 1; /* Make visible */
+        visibility: visible; /* Make visible */
+    }
+
     .menuIcon {
-  
         cursor: pointer;
         font-size: 2rem; 
         color: red;
-        z-index: 999;
+        z-index: 1001; /* Ensure it's above other elements */
         padding: 20px;
     }
-    .navList.showMenu {
-        /* max-height: 300px;  */
-        opacity: 1; /* Make visible */
-    }
 
-    .navList li {
-        /* padding: 10px;  */
-        text-align: center; 
-    }
-    .nav img{
-        width: 150px;
-        height: 100px;
-        max-width: 90%;
+    .nav img {
         padding-top: 10px;
-        left: 0;
     }
 }

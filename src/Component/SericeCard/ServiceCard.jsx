@@ -6,7 +6,11 @@ import Modal from 'react-modal';
 const ServiceCard = ({ icon, title, description }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleOpenModal = () => setIsModalOpen(true);
+  const handleOpenModal = (e) => {
+    e.stopPropagation(); // Prevent any parent handlers from being notified
+    setIsModalOpen(true);
+  };
+
   const handleCloseModal = () => setIsModalOpen(false);
 
   const customStyles = {
@@ -18,7 +22,7 @@ const ServiceCard = ({ icon, title, description }) => {
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
       width: '55%',
-      height:'75%',
+      height: '75%',
       padding: '20px',
       backgroundColor: 'rgba(0, 0, 0, 0.85)',  
       color: 'white',                          
@@ -29,9 +33,10 @@ const ServiceCard = ({ icon, title, description }) => {
     overlay: {
       backgroundColor: 'rgba(0, 0, 0, 0.75)',   
       zIndex: '999',                            
+      pointerEvents: 'auto', // Allow clicks on overlay
     },
   };
-  
+
   return (
     <div className={styles.card}>
       <img className={styles.card_icon} src={icon} alt={title} />
@@ -39,7 +44,6 @@ const ServiceCard = ({ icon, title, description }) => {
       <p className={styles.card_description}>{description}</p>
       <button 
         onClick={handleOpenModal} 
-        onTouchEnd={handleOpenModal} 
         className={styles.card_link}
       >
         Let's Talk

@@ -76,8 +76,8 @@ textarea {
 }
 
 .errorMessage {
-  color: red; /* Error message color */
-  font-size: 12px; /* Smaller font size for error messages */
+  color: red; 
+  font-size: 12px; 
 }
 
 

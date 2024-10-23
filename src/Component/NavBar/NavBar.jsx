@@ -3,7 +3,8 @@ import styles from './NavBar.module.css';
 import { Link } from 'react-router-dom';
 import { GrMenu } from "react-icons/gr";
 import { RiCloseLargeFill } from "react-icons/ri";
-import logo from "./../../assets/Images/logo.png"
+import logo from "./../../assets/Images/logo.png";
+
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -28,14 +29,14 @@ const NavBar = () => {
 
   return (
     <nav className={styles.nav}>
-       <Link to="/" className={styles.logoContainer}>
-                        <img src={logo} alt="Logo" />
+      <Link to="/" className={styles.logoContainer}>
+        <img src={logo} alt="Logo" />
       </Link>
-      <div  className={styles.menuIcon} onClick={handleMenuToggle}>
+      <div className={styles.menuIcon} onClick={handleMenuToggle}>
         {open ? <RiCloseLargeFill /> : <GrMenu />}
       </div>
 
-      <ul className={`${styles.navList} ${open && isMobile ? styles.showMenu : ''}`}>
+      <ul className={`${styles.navList} ${open && isMobile ? styles.showMenu : styles.hidden}`}>
         <li>
           <Link to="/" className={styles.navLink} onClick={() => setOpen(false)}>Home</Link>
         </li>
@@ -49,8 +50,6 @@ const NavBar = () => {
           <Link to="/contact" className={styles.navLink} onClick={() => setOpen(false)}>Contact Us</Link>
         </li>
       </ul>
-
-     
     </nav>
   );
 };

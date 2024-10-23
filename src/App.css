@@ -1,6 +1,9 @@
 /* General styles for all elements */
+
+
+/* Optional: add box-sizing for better layout control */
 * {
-    box-sizing: border-box; /* Optional: add box-sizing for better layout control */
+    /* box-sizing: border-box;  */
 }
 
 /* Media query for mobile devices */

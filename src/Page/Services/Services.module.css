@@ -114,9 +114,9 @@ li {
 
   .mainService {
     width: 100%;
-    height: auto; /* Changed to auto for better responsiveness */
+    height: auto; 
     background-color: black;
-    text-align: left;
+    /* text-align: left; */
   }
   
   .mainService h1 {

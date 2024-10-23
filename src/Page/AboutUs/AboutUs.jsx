@@ -12,19 +12,22 @@ const AboutUs = () => {
     "Our focus is on delivering measurable results that drive growth."
   ];
 
-  // Simulate loading (replace with your real loading logic)
+
+
+  
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1000); // Adjust time as needed
-
+    }, 1000); 
     return () => clearTimeout(timer);
   }, []);
+
+
 
   if (loading) {
     return (
       <div style={{ 
-        backgroundColor: 'black', // Preloader background color
+        backgroundColor: 'black',
         position: 'fixed', 
         top: 0, 
         left: 0, 
@@ -35,7 +38,7 @@ const AboutUs = () => {
         justifyContent: 'center', 
         alignItems: 'center' 
       }}>
-        <ClimbingBoxLoader color="#ff0000" size={35} /> {/* Change the color as needed */}
+        <ClimbingBoxLoader color="#ff0000" size={35} />
       </div>
     );
   }

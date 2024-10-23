@@ -65,7 +65,7 @@ const Contact = () => {
             <div className={styles.inputWrapper}>
               <input
                 // type="email"
-                placeholder="Enter a valid email address"
+                placeholder="Enter your email address"
                 className={`${styles.contactinput} ${error.email ? styles.errorInput : ''}`}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -78,7 +78,7 @@ const Contact = () => {
             <div className={styles.inputWrapper}>
               <input
                 type="tel"
-                placeholder="Enter a valid phone number"
+                placeholder="Enter your phone number"
                 className={`${styles.contactinput} ${error.phone ? styles.errorInput : ''}`}
                 maxLength="10"
                 value={phoneNumber}

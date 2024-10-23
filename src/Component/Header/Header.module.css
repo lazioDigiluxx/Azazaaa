@@ -177,9 +177,9 @@
         margin-top: 15px;
     }
 
-    .background_video {
-        display: none; /* Hide the video on small screens for performance */
-    }
+    /* .background_video {
+        display: none; 
+    } */
     
 }
 

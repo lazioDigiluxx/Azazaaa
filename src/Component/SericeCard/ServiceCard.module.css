@@ -20,17 +20,18 @@
     border-color: white;
 }
 
-/* Additional styles for mobile responsiveness */
 @media (max-width: 768px) {
     .card {
       
-        height: 150px; /* Decrease height for mobile */
-        width: 60%; /* Use a percentage width to fit smaller screens */
-        margin: 0px auto; /* Center the card */
+        height: 150px; 
+        width: 60%; 
+        margin: 0px auto;
+        text-align: center;
+        justify-content: center;
     }
 
     .card_title {
-        font-size: 20px; /* Adjust font size for titles */
+        font-size: 20px; 
     }
 
     .card_description {
@@ -79,3 +80,17 @@
     background-color: #f4bb44; 
     color: black; 
 }
+
+/* i wrote this for engaging purpose only plese dont interfear with this coe */
+
+/* @media (min-width: 768px) and (max-width: 1024px) {
+    .card{
+        width: 100%;
+        justify-content: center;
+        inline-size: none;
+        size: calc();
+        text-align: center ;
+
+    }
+} */
+  

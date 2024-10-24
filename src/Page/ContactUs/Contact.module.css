@@ -2,21 +2,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  /* padding: 10px; */
   width: 100%;
   height: auto;
-
+ /* overflow-x: hidden; */
   
 }
 
 
 .contactbox {
   background-color: rgb(0, 0, 0);
-  padding: 10%;
+  padding: 5%;
   border-radius: 8px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
-
+margin-top: 100px;
   
 }
 
@@ -31,9 +31,10 @@
 
 .row {
   display: flex;
-  justify-content: space-between;
+ 
   gap: 40px;
   margin-bottom: 20px;
+
 }
 
 
@@ -76,8 +77,8 @@ textarea {
 }
 
 .errorMessage {
-  color: red; 
-  font-size: 12px; 
+  color: red; /* Error message color */
+  font-size: 12px; /* Smaller font size for error messages */
 }
 
 
@@ -100,34 +101,29 @@ textarea {
 
 /* Submit button */
 .contactsubmitbtn {
-  width: 100%;
+  width: 50%;
   padding: 15px;
-  background-color: gold;
+  background-color: red; /* Default background color */
   color: white;
   border: none;
   border-radius: 20px;
   font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+  margin-left: 22%;
 }
 
-.contactsubmitbtn {
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  border-radius: 30px;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-decoration: none;
-  transition: 0.5s;
-  overflow: hidden;
-  backdrop-filter: yellow(15px);
-
+/* Hover effect */
+.contactsubmitbtn:hover {
+  background-color: green; /* Change to green on hover */
 }
+
+
 
 /* Icon container styling */
 .iconcontainer {
   margin-top: 40px;
-  background-color: #f9fafb68;
+  background-color: black;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
@@ -142,9 +138,9 @@ textarea {
   margin-top: 30px;
 }
 
-/* Individual info item styling */
+
 .infoitem {
-  color: white;
+
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -155,7 +151,7 @@ textarea {
 /* Icon styling */
 .infoicon {
   /* background-color: gold; */
-  color: rgb(255, 255, 255);
+ 
   padding: 12px;
   border-radius: 50%;
   margin-bottom: 8px;
@@ -167,18 +163,17 @@ textarea {
 
 
 /* Existing styles... */
-
-/* Media Query for mobile screens */
 @media (max-width: 768px) {
   .row {
     flex-direction: column; /* Stack input fields vertically */
-    gap: 10px; /* Reduce space between input fields */
+    gap: 4px; /* Further reduced space between input fields */
   }
 
   /* Align contact info items in a vertical stack */
   .contactinfo {
     flex-direction: column; /* Change direction to column */
     align-items: center; /* Center items */
+    gap: 10px; /* Spacing between contact info items */
   }
 
   /* Individual info item styling for mobile */
@@ -186,23 +181,21 @@ textarea {
     display: flex;
     flex-direction: row; /* Keep icons and text in a row */
     align-items: center; /* Center vertically */
-    margin-bottom: 10px; /* Space between each info item */
+    margin-bottom: 6px; /* Reduced space between each info item */
     max-width: none; /* Remove max-width to allow full width */
     text-align: left; /* Align text to the left */
-    
   }
 
   /* Adjust icon size for mobile */
   .infoicon {
-    margin-right: 8px; /* Space between icon and text */
-    height: 24px; /* Adjust height of icon */
-    width: 24px; /* Adjust width of icon */
-    
+    margin-right: 6px; /* Space between icon and text */
+    height: 24px; /* Keep icon height */
+    width: 24px; /* Keep icon width */
   }
   
   /* Adjust text size for better fit */
   .infoitem h3 {
-    font-size: 1rem; /* Adjust header size */
+    font-size: 1rem; /* Header size */
     margin: 0; /* Remove default margin */
   }
 

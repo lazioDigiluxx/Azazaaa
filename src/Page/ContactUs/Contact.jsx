@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Users, Phone, MapPin } from 'lucide-react';
 import styles from './Contact.module.css';
 
+
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -14,30 +15,47 @@ const Contact = () => {
     let valid = true;
     const newError = { name: '', email: '', phone: '', message: '' };
 
-    if (!/^[a-zA-Z\s]+$/.test(name)) {
+    // Trimmed inputs for validation
+    const trimmedName = name.trim();
+    const trimmedEmail = email.trim();
+    const trimmedPhoneNumber = phoneNumber.trim();
+    const trimmedMessage = message.trim();
+
+    // Name validation
+    if (!trimmedName || trimmedName !== name || !/^[a-zA-Z\s]+$/.test(trimmedName)) {
       newError.name = 'Invalid Input';
       valid = false;
     }
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    // Email validation
+    if (!trimmedEmail || trimmedEmail !== email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail)) {
       newError.email = 'Invalid Input';
       valid = false;
     }
 
-    if (!/^\d{10}$/.test(phoneNumber)) {
+    // Phone number validation
+    if (!trimmedPhoneNumber || trimmedPhoneNumber !== phoneNumber || !/^[6789]\d{9}$/.test(trimmedPhoneNumber)) {
       newError.phone = 'Invalid Input';
       valid = false;
     }
 
-    if (!message.trim()) {
+    // Message validation
+    if (trimmedMessage && (trimmedMessage !== message || !/^[a-zA-Z\s]*$/.test(trimmedMessage))) {
       newError.message = 'Invalid Input';
       valid = false;
     }
 
+    // Set error state
     setError(newError);
 
+    // If valid, submit the form
     if (valid) {
-      console.log('Form submitted successfully with data:', { name, email, phoneNumber, message });
+      console.log('Form submitted successfully with data:', {
+        name: trimmedName,
+        email: trimmedEmail,
+        phoneNumber: trimmedPhoneNumber,
+        message: trimmedMessage
+      });
       setName('');
       setEmail('');
       setPhoneNumber('');
@@ -49,7 +67,7 @@ const Contact = () => {
   return (
     <div className={styles.contactmAIN}>
       <div className={styles.contactbox}>
-        <h1 className={styles.contacttitle}> Let's Talk About Your Project</h1>
+        <h1 className={styles.contacttitle}>Let's Talk About Your Project</h1>
         <form className={styles.contactform} onSubmit={handleSubmit}>
           <div className={styles.row}>
             <div className={styles.inputWrapper}>
@@ -64,8 +82,8 @@ const Contact = () => {
             </div>
             <div className={styles.inputWrapper}>
               <input
-                // type="email"
-                placeholder="Enter your email address"
+                type="email"
+                placeholder="Enter a valid email address"
                 className={`${styles.contactinput} ${error.email ? styles.errorInput : ''}`}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -78,7 +96,7 @@ const Contact = () => {
             <div className={styles.inputWrapper}>
               <input
                 type="tel"
-                placeholder="Enter your phone number"
+                placeholder="Enter a valid phone number"
                 className={`${styles.contactinput} ${error.phone ? styles.errorInput : ''}`}
                 maxLength="10"
                 value={phoneNumber}
@@ -88,7 +106,7 @@ const Contact = () => {
             </div>
             <div className={styles.inputWrapper}>
               <textarea
-                placeholder="Enter your Message"
+                placeholder="Enter your Message (optional)"
                 className={`${styles.contactinput} ${error.message ? styles.errorInput : ''}`}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
@@ -105,30 +123,22 @@ const Contact = () => {
         <div className={styles.iconcontainer}>
           <div className={styles.contactinfo}>
             <div className={`${styles.infoitem} ${styles.flexRow}`}>
-              <Users style={{ color: 'yellow', fontSize: '28px' }}  />
+              <Users style={{ color: 'red', fontSize: '28px' }} />
               <div>
-              
-                <p>Azaza Marketing solutions promote your brand with expert Digital marketing,Web developmemt and Branding</p>
-                <p>Workouts</p>
+              <p style={{color:"white"}}>Azaza Marketing solutions promote your brand with expert Digital marketing, Web development, and Branding</p>
               </div>
             </div>
             <div className={`${styles.infoitem} ${styles.flexRow}`}>
-            <Phone style={{ color: 'yellow', fontSize: '28px' }} />
-
+              <Phone style={{ color: 'red', fontSize: '28px' }} />
               <div>
-                
-                <p>&nbsp;&nbsp;+(91)7736558999 , +(91)9867453210</p>
-                
-              
+              <p style={{color:"white"}}>&nbsp;&nbsp;+(91)7736558999 </p>
               </div>
             </div>
             <div className={`${styles.infoitem} ${styles.flexRow}`}>
-              <MapPin  style={{ color: 'yellow', fontSize: '28px' }}  />
+              <MapPin style={{ color: 'red', fontSize: '28px' }} />
               <div>
-               
-                <p>
-                  Kannoth building, near Darussalam School,
-                  Vallathol Junction, Thrikkakara P.O, Kochi, Kerala 682021
+                <p style={{color:"white"}}>
+                  Kannoth building, near Darussalam School, Vallathol Junction, Thrikkakara P.O, Kochi, Kerala 682021
                 </p>
               </div>
             </div>

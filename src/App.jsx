@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Page/Home/Home';
 import AboutUs from './Page/AboutUs/AboutUs';
 import ParticlesComponent from './Component/Animation/Particles';
-// import Contact from './Page/ContactUs/Contact';
+import Contact from './Page/ContactUs/Contact';
 import Service from './Page/Services/Service';
 import Layout from './Component/Layout/Layout';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
@@ -52,7 +52,7 @@ function App() {
             <Route element={<Layout />}>
               <Route path="/" element={<Home />} />
               <Route path='/About' element={<AboutUs />} />
-              {/* <Route path='/Contact' element={<Contact />} /> */}
+              <Route path='/Contact' element={<Contact />} />
               <Route path='/Services' element={<Service />} />
             </Route>
           </Routes>

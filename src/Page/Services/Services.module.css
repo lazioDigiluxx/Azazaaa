@@ -1,10 +1,10 @@
 /* Services.module.css */
 .mainService {
   width: 100%;
-  height: auto; /* Changed to auto for better responsiveness */
+  height: auto; 
   background-color: black;
-  text-align: left;
-  padding: 20px; /* Add padding for smaller screens */
+  text-align: center;
+  padding: 20px; 
 }
 
 .mainService p {
@@ -21,7 +21,7 @@
 }
 
 .mainService h1 {
-  padding-left: 5%; /* Adjusted for smaller screens */
+  /* padding-left: 5%;   */
   color: white;
   padding-top: 20px; /* Adjusted for smaller screens */
   font-size: 2rem; /* Reduced font size for smaller screens */
@@ -150,6 +150,7 @@ li {
 
 @media (min-width: 600px) and (max-width: 768px) {
   /* Styles for portrait tablets */
+
   .mainService {
     width: 100%;
     height: auto; /* Changed to auto for better responsiveness */
@@ -157,6 +158,7 @@ li {
     text-align: left;
     padding: 50px; /* Add padding for smaller screens */
   }
+
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   /* Styles for landscape tablets */

@@ -1,4 +1,5 @@
 .card {
+
     padding-top: 100px;
     background-color: rgb(83, 81, 81);
     color: white;
@@ -11,6 +12,7 @@
     height: 430px;
     width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+    
 }
 
 .card:hover {
@@ -54,6 +56,7 @@
     border: none; /* Remove border */
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s; /* Smooth background color transition */
+    width: 50%;
 }
 
 .card button:hover {

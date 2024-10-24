@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Services.module.css";
 import ServiceCard from "./../../Component/SericeCard/ServiceCard";
-import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader"; // Import the loader
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
 import webIcon from "./../../assets/Images/coding.png";
 import seoIcon from "./../../assets/Images/seo.png";
@@ -12,20 +12,20 @@ import logoIcon from "./../../assets/Images/logoIcon.png";
 
 const Service = () => {
   const [animate, setAnimate] = useState(false);
-  const [loading, setLoading] = useState(true); // State for loading
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false); // Set loading to false after a delay
-    }, 1000); // Adjust time as needed
+      setLoading(false);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
     const animationTimer = setTimeout(() => {
-      setAnimate(true); // Trigger animation after component mounts
-    }, 100); // Delay to ensure component has rendered
+      setAnimate(true);
+    }, 100);
 
     return () => clearTimeout(animationTimer);
   }, []);
@@ -33,16 +33,16 @@ const Service = () => {
   if (loading) {
     return (
       <div style={{
-        backgroundColor: 'black', // Preloader background color
-        position: 'fixed', 
-        top: 0, 
-        left: 0, 
-        width: '100%', 
-        height: '100%', 
-        zIndex: 1000, 
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center' 
+        backgroundColor: 'black',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        zIndex: 1000,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
       }}>
         <ClimbingBoxLoader color="#ff0000" size={35} aria-label="Loading services" />
       </div>
@@ -93,17 +93,16 @@ const Service = () => {
         <ServiceCard
           icon={BrandingIcon}
           title="Branding"
-          href="/services/social-media-marketing"
+          href="/services/branding"
           description="Developing strong brand identities that resonate with your audience."
         />
 
         <ServiceCard
           icon={logoIcon}
           title="Logo Creation"
-          href="/services/social-media-marketing"
+          href="/services/logo-creation"
           description="Designing unique logos that capture the essence of your brand."
         />
-
       </div>
     </div>
   );

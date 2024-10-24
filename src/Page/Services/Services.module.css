@@ -17,6 +17,7 @@
   display: flex;
   flex-wrap: wrap; /* Allow wrapping for responsiveness */
   justify-content: center;
+  text-align: center;
 }
 
 .mainService h1 {
@@ -145,4 +146,30 @@ li {
   .mainService h1 {
       padding-top: 70px; /* Original padding */
   }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  /* Styles for portrait tablets */
+  .mainService {
+    width: 100%;
+    height: auto; /* Changed to auto for better responsiveness */
+    background-color: black;
+    text-align: left;
+    padding: 50px; /* Add padding for smaller screens */
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Styles for landscape tablets */
+
+  .mainService {
+    width: 100%;
+    height: auto; /* Changed to auto for better responsiveness */
+    background-color: black;
+    text-align: left;
+    /* padding: 50px;  */
+    overflow-y: hidden;
+  }
+
+
+  
 }
